@@ -1,19 +1,11 @@
 <template>
   <div class="container mt-4">
     <h2>Latest Videos</h2>
-    <div class="row">
-      <div
-        v-for="(video, index) in videos"
-        :key="index"
-        class="col-md-4 col-sm-6 col-lg-3 mb-4"
-      >
+    <div class="row row-cols-2 row-cols-md-6 row-cols-8 g-3">
+      <div v-for="(video, index) in videos" :key="index" class="col">
         <div class="card">
           <a :href="`https://www.youtube.com/watch?v=${video.videoId}`" target="_blank">
-            <img
-              :src="video.thumbnailUrl"
-              :alt="`Video thumbnail for ${video.title}`"
-              class="card-img-top"
-            />
+            <img :src="video.thumbnailUrl" :alt="`Video thumbnail for ${video.title}`" class="card-img-top" />
           </a>
           <div class="card-body">
             <h5 class="card-title">{{ video.title }}</h5>
@@ -31,7 +23,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      videos: [], // Array to hold multiple videos
+      videos: [],
     };
   },
   created() {
@@ -88,7 +80,7 @@ export default {
 }
 
 .card-img-top {
-  width: 100%;
+  /* width: 100%; */
   height: auto;
   border-bottom: 1px solid #ddd;
 }
@@ -98,14 +90,5 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.card-text {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.container {
-  max-width: 1200px;
 }
 </style>
