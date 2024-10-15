@@ -1,11 +1,11 @@
 <template>
   <div>
     <router-link to="/products" class="text-decoration-none text-dark">
-      <img src="/img/banner/desktop.jpg" class="d-md-block d-none w-100" alt="Banner">
-      <img src="/img/banner/mobile.jpg" class="d-md-none d-block w-100" alt="Banner">
+      <img src="/img/banner/1.jpg" class="d-md-block d-none w-100" alt="Banner">
+      <img src="/img/banner/1.jpg" class="d-md-none d-block w-100" alt="Banner">
     </router-link>
   </div>
-  <div class="container my-5" v-observe>
+  <!-- <div class="container my-5" v-observe>
     <div class="row g-1">
       <div class="col-4 mb-4" v-for="(card, index) in cards" :key="index">
         <div class="card rounded-0 position-relative border-0 p-2 text-white bg-dark">
@@ -17,7 +17,7 @@
       </div>
       <div class="col-12 text-muted">Compared to conventional engine oil</div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>

@@ -1,18 +1,23 @@
 <template>
-    <div class="container-fluid bg-dark text-white pt-3 border-top border-bottom" >
+    <div class="container-fluid bg-light text-dark pt-3 border-top border-bottom">
         <div class="row">
             <div class="col-12 col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
                 <router-link to="/" class="text-decoration-none text-dark d-flex align-items-center">
-                    <img :src="img" style="width: 100%;object-fit: contain; ">
+                    <img :src="img" style="height:80px;object-fit: contain; ">
+                    <span class="fs-2">Exolar Energy</span>
                 </router-link>
-
+                <p class="text-center mt-3">We will help you in providing complete solution and service for the installation of solar power plant
+                    at your roof. We bring together our expertise and experience in end to end EPC services, to
+                    electricity consumers of all categories.</p>
             </div>
 
             <div class=" col-12 col-md-4 mb-3 text-center">
                 <p class="mb-2 fw-bold">Contact Us</p>
-                <p class="mb-2">Email : info@clgoilindia.com</p>
-                <p class="mb-2">Address : HD-723, WeWork Enam Sambhav, C - 20, <br>G Block Rd, G-Block BKC, Bandra Kurla
-                    Complex,<br> Bandra East, Mumbai, Maharashtra - 400051 </p>
+                <p class="mb-2">Phone : +91 11 4656 8831, +91 9319179678</p>
+                <p class="mb-2">Email : contact.exolarenergy@gmail.com</p>
+                <p class="mb-2">Address : 310, Pearl Best Height-1,
+                    <br> Netaji Subhash Place, Delhi-34
+                </p>
                 <div class="d-flex gap-2 justify-content-center">
                     <p class="fw-bold">Follow Us :</p>
                     <i class="bi bi-twitter-x"></i>
@@ -26,14 +31,14 @@
                 <div class="mb-3 text-start">
                     <p class="mb-2 fw-bold">Company</p>
                     <div class="d-flex flex-column">
-                        <router-link :to="link.link" class="text-decoration-none my-1 text-white"
+                        <router-link :to="link.link" class="text-decoration-none my-1 text-dark"
                             v-for="(link, index) in company" :key="index">{{ link.name }}</router-link>
                     </div>
                 </div>
                 <div class="mb-3 text-start">
                     <p class="mb-2 fw-bold">Resources</p>
                     <div class="d-flex flex-column">
-                        <router-link :to="link.link" class="text-decoration-none my-1 text-white"
+                        <router-link :to="link.link" class="text-decoration-none my-1 text-dark"
                             v-for="(link, index) in links" :key="index">{{ link.name }}</router-link>
                     </div>
                 </div>

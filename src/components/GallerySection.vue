@@ -12,10 +12,10 @@
         </div>
       </div>
     </div>
-    <div class="mt-3 text-end">
+    <!-- <div class="mt-3 text-end">
       <router-link to="/gallery" class="text-decoration-none text-danger">More <i
           class="bi bi-arrow-right"></i></router-link>
-    </div>
+    </div> -->
   </div>
 
   <!-- Modal -->

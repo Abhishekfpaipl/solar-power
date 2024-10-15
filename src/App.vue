@@ -30,4 +30,10 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+:root {
+  --bg-primary: #237ABF;
+  --bg-secondary: #283D90;
+  --bg-third: #481E14;
+}
 </style>

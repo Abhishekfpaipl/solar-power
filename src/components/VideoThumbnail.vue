@@ -1,9 +1,9 @@
-<template>
+<!-- <template>
   <div class="container mt-4">
     <h2>Latest Videos</h2>
     <div class="row row-cols-2 row-cols-md-6 row-cols-8 g-3">
       <div v-for="(video, index) in videos" :key="index" class="col">
-        <div class="card">
+        <div class="card h-100">
           <a :href="`https://www.youtube.com/watch?v=${video.videoId}`" target="_blank">
             <img :src="video.thumbnailUrl" :alt="`Video thumbnail for ${video.title}`" class="card-img-top" />
           </a>
@@ -90,5 +90,128 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+</style> -->
+<template>
+  <div class="container-fluid mt-4 shorts-container">
+    <div class="d-flex align-items-center mb-3">
+      <h2 class="mb-0 me-2">
+        <i class="bi bi-lightning-charge-fill text-danger"></i> Shorts
+      </h2>
+      <button class="btn-close ms-auto"></button>
+    </div>
+    <div class="shorts-scroll">
+      <div v-for="(short, index) in shorts" :key="index" class="short-card me-3">
+        <div class="position-relative">
+          <img :src="short.thumbnailUrl" :alt="short.title" class="short-thumbnail">
+          <div class="short-overlay">
+            <div class="short-title">{{ short.title }}</div>
+          </div>
+        </div>
+        <div class="short-info mt-2">
+          <div class="short-views">{{ short.views }} views</div>
+          <button class="btn btn-link p-0 text-dark">
+            <i class="bi bi-three-dots-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      shorts: [
+        {
+          thumbnailUrl: 'https://picsum.photos/200/300?random=1',
+          title: 'I BET U DINT KNOW 5 high paying tech skills.#coding...',
+          views: '1M'
+        },
+        {
+          thumbnailUrl: 'https://picsum.photos/200/300?random=2',
+          title: 'Why Humpback Whales Attack Orcas to Protect ...',
+          views: '35K'
+        },
+        {
+          thumbnailUrl: 'https://picsum.photos/200/300?random=3',
+          title: 'Reality of 80 LPA at Atlassian 🫣 ! CTC ...',
+          views: '38K'
+        },
+        {
+          thumbnailUrl: 'https://picsum.photos/200/300?random=4',
+          title: 'Resume that got me interviews at Amazon, ...',
+          views: '599K'
+        },
+        {
+          thumbnailUrl: 'https://picsum.photos/200/300?random=5',
+          title: 'Shantanu Sharing Secrets of Ratan TATA - These 2 ...',
+          views: '2.3M'
+        }
+      ]
+    };
+  }
+};
+</script>
+
+<style scoped>
+.shorts-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.shorts-scroll {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.shorts-scroll::-webkit-scrollbar {
+  display: none;  /* WebKit */
+}
+
+.short-card {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.short-thumbnail {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.short-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.short-title {
+  color: white;
+  font-size: 0.8rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.short-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.short-views {
+  color: #606060;
 }
 </style>
