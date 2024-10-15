@@ -75,34 +75,34 @@ export default {
                     name: 'About Us',
                     link: '/about-us'
                 },
-                {
-                    id: 3,
-                    name: 'Dealership',
-                    link: '/dealership'
-                },
-                {
-                    id: 23,
-                    name: 'Career',
-                    link: '/career'
-                },
-                {
-                    id: 23,
-                    name: 'Benefit',
-                    link: '/benefit'
-                },
-                {
-                    id: 3,
-                    name: 'Check Dealership',
-                    link: '/check-dealership'
-                },
+                // {
+                //     id: 3,
+                //     name: 'Dealership',
+                //     link: '/dealership'
+                // },
+                // {
+                //     id: 23,
+                //     name: 'Career',
+                //     link: '/career'
+                // },
+                // {
+                //     id: 23,
+                //     name: 'Benefit',
+                //     link: '/benefit'
+                // },
+                // {
+                //     id: 3,
+                //     name: 'Check Dealership',
+                //     link: '/check-dealership'
+                // },
 
             ],
             links: [
-                {
-                    id: 13,
-                    name: 'Gallery',
-                    link: '/gallery'
-                },
+                // {
+                //     id: 13,
+                //     name: 'Gallery',
+                //     link: '/gallery'
+                // },
                 {
                     id: 1,
                     name: 'Privacy Policy',
@@ -113,16 +113,16 @@ export default {
                     name: 'Terms & Conditions',
                     link: '/term-of-use'
                 },
-                {
-                    id: 23,
-                    name: 'Facility',
-                    link: '/facility'
-                },
-                {
-                    id: 23,
-                    name: 'Reports',
-                    link: '/report'
-                },
+                // {
+                //     id: 23,
+                //     name: 'Facility',
+                //     link: '/facility'
+                // },
+                // {
+                //     id: 23,
+                //     name: 'Reports',
+                //     link: '/report'
+                // },
             ],
         }
     },

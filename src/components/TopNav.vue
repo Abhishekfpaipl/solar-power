@@ -37,9 +37,9 @@ export default {
                 { name: 'Home', route: '/' },
                 { name: 'About Us', route: '/about-us' },
                 { name: 'Contact Us', route: '/contact-us' },
-                { name: 'Career', route: '/career' },
-                { name: 'Benefit', route: '/benefit' },
-                { name: 'Dealership', route: '/dealership' },
+                // { name: 'Career', route: '/career' },
+                // { name: 'Benefit', route: '/benefit' },
+                // { name: 'Dealership', route: '/dealership' },
             ]
         }
     }
