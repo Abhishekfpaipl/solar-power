@@ -1,6 +1,6 @@
 <template>
     <div class="banner-container">
-        <img src="/img/test.jpg" alt="Product Banner" class="banner-image">
+        <img src="/img/sectionbanner.jpeg" alt="Product Banner" class="banner-image">
         <div class="overlay" >
             <h1 class="display-1 banner-title">{{ pageName }}</h1>
         </div>

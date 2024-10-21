@@ -94,11 +94,14 @@ export default {
 </style> -->
 <template>
   <div class="container-fluid mt-4 shorts-container">
-    <div class="d-flex align-items-center mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-3">
       <h2 class="mb-0 me-2">
         <i class="bi bi-lightning-charge-fill text-danger"></i> Shorts
       </h2>
-      <button class="btn-close ms-auto"></button>
+      <router-link to="/testimonial" class="text-decoration-none text-dark">
+        <span>See More</span>
+        <i class="bi bi-arrow-right ms-2"></i>
+      </router-link>
     </div>
     <div class="shorts-scroll">
       <div v-for="(short, index) in shorts" :key="index" class="short-card me-3">
@@ -164,12 +167,15 @@ export default {
 .shorts-scroll {
   display: flex;
   overflow-x: auto;
-  scrollbar-width: none;  /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
 }
 
 .shorts-scroll::-webkit-scrollbar {
-  display: none;  /* WebKit */
+  display: none;
+  /* WebKit */
 }
 
 .short-card {
@@ -189,7 +195,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   padding: 10px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;

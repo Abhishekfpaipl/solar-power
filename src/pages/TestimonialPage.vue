@@ -1,5 +1,6 @@
 <template>
     <div>
+        <SectionTopBanner />
         <div class="container mt-4">
             <h2>Latest Videos</h2>
             <div class="row row-cols-2 g-3">
@@ -8,9 +9,9 @@
 
                         <!-- <img :src="video.thumbnailUrl" :alt="video.title" class="rounded-4"
                                 style="width: 100%; height:250px; object-fit: cover;"> -->
-                        <div class="" style="height:250px;" >
-                            <iframe style="width: 100%;height: 100%;" :src="`https://www.youtube.com/embed/${video.videoId}`"
-                                frameborder="0"
+                        <div class="" style="height:250px;">
+                            <iframe style="width: 100%;height: 100%;"
+                                :src="`https://www.youtube.com/embed/${video.videoId}`" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
@@ -33,8 +34,12 @@
 </template>
 <script>
 import axios from "axios";
+import SectionTopBanner from '@/components/SectionTopBanner.vue'
 
 export default {
+    components: {
+        SectionTopBanner
+    },
     data() {
         return {
             videos: [],
